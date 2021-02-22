@@ -1,0 +1,205 @@
+.menu__top {
+    background-color:#44051f ;
+    display: flex;
+    justify-content: space-between;
+    /* align-content: center; */
+    color: white;
+    padding: 2px 50px;
+  }
+  
+  .menu__top > h4 {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .menu__top > h4 > a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .menu__top > h4 > a:hover {
+    text-decoration: none;
+    color: #347a2a;
+  }
+  
+  .menu__top > h4 > .MuiSvgIcon-root {
+    
+    margin-right: 8px;
+  }
+  
+  .menu__top > span > .MuiSvgIcon-root {
+    margin-right: 10px;
+    vertical-align: middle;
+    opacity: 0.75;
+  }
+  .menu__top > h5 {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 30px;
+    opacity: 0.75;
+  }
+  .menu__top > h5 > input {
+    border: none;
+    outline-width: 0;
+    padding-left: 10px;
+  }
+  
+  .menu__top > h5 > .MuiSvgIcon-root {
+    vertical-align: middle;
+    color: gray;
+  }
+  
+  /*MIddle Menu*/
+  
+  .menu__middle {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 80px;
+    height: 90px;
+  }
+  .menu__middle > img {
+    padding-left: 25px;
+  }
+  .phone {
+    display: flex;
+    align-items: center;
+  }
+  
+  .phone > .MuiSvgIcon-root {
+    margin-right: 15px;
+    color: #600629;
+  }
+  
+  .give-call {
+    display: flex;
+    flex-direction: column;
+  }
+  .number {
+    font-weight: bolder;
+  }
+  .text {
+    font-size: 0.9em;
+  }
+  .mail {
+    display: flex;
+    align-items: center;
+  }
+  .mail_us {
+    display: flex;
+    flex-direction: column;
+  }
+  .mail > .MuiSvgIcon-root {
+    margin-right: 15px;
+    color: #600629;
+  }
+  .text2 {
+    font-size: 0.9em;
+  }
+  .e-mail {
+    font-weight: bolder;
+    color: #600629;
+  }
+  
+  .address {
+    display: flex;
+    align-items: center;
+  }
+  
+  .location {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+  }
+  .address > .MuiSvgIcon-root {
+    margin-right: 15px;
+    color: #600629;
+  }
+  
+  /*Bottom Menu*/
+  
+  .menu__bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1em;
+    font-weight: bolder;
+    color: white;
+    background: #600629;
+    padding: 20px 180px;
+  }
+  /* .menu__bottom :hover {
+    color: #6fd861;
+  }
+   */
+  .dropbtn {
+    background-color: #600629;
+    color: white;
+    font-size: 0.9em;
+    font-weight: bolder;
+    border: none;
+    text-align: center;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 800px;
+    padding-left: 2;
+    
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content > a {
+    color: #600629;
+    width: 100%;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content1 > a {
+    color: #600629;
+    width: 100%;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    position: unset;
+  }
+  .dropdown-content :hover {
+    color: black;
+  }
+  .dropdown-content1 :hover {
+    color: black;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown:hover .dropdown-content1 {
+    display: block;
+  }
+  
+  /*sticky navbar*/
+
+  .link{
+    text-decoration: none;
+    }
+   

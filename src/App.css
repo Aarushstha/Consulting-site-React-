@@ -1,3 +1,11 @@
+/* * {
+  border: 1px solid red;
+} */
+
+:root {
+  --primary: red!important;
+}
+
 .App {
   text-align: center;
 }
