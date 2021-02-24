@@ -1,38 +1,67 @@
-import React from "react";
-import { Container, Row, Card, Button } from "react-bootstrap";
+import { React, useState } from "react";
+import { Container, Row, Button } from "react-bootstrap";
+
+import LeadershipCard from "./components/leadership/LeadershipCard";
 import Dipendra from "../Images/dipen.jpg";
 import Susan from "../Images/Susan.jpg";
 import Suchan from "../Images/suchan.jpg";
 import Sushan from "../Images/sushan.jpg";
-import Kushal from "../Images/Kushal.jpg";
 import Ashmita from "../Images/ashmita.jpg";
 import Paras from "../Images/paras.jpg";
 
 function Leadership() {
   let originalData = [
     {
-      name: "Dipendra",
-      position: "management",
+      image: Dipendra,
+      name: "Dipendra Bahadur Chand Thakuri",
+      position: "CEO",
+      level: "C-level",
     },
     {
-      name: "Susan",
-      position: "creativeminds",
+      image: Susan,
+      name: "Susan Shrestha",
+      position: "Web Developer",
+      level: "Creativeminds",
+    },
+    {
+      image: Sushan,
+      name: "Sushan Manandhar",
+      position: "Advisor",
+      level: "Advisor",
+    },
+    {
+      image: Ashmita,
+      name: "Ashmita Shrestha",
+      position: "COO",
+      level: "C-level",
+    },
+    {
+      image: Paras,
+      name: "Paras Dura",
+      position: "Graphics Designer",
+      level: "Creativeminds",
+    },
+    {
+      image: Suchan,
+      name: "Suchan Khadka",
+      position: "Manager",
+      level: "Management",
     },
   ];
 
-  // const [filteredData, setFilteredData] = useState([]);
+  const [filteredData, setFilteredData] = useState(originalData);
 
-  // function ourFilter(position) {
-  //   let filtered = originalData.filter((person) => {
-  //     return person.position == position;
-  //   });
+  function ourFilter(level) {
+    if (level === "all") {
+      setFilteredData(originalData);
+    } else {
+      let filtered = originalData.filter((person) => {
+        return person.level === level;
+      });
+      setFilteredData(filtered);
+    }
+  }
 
-  //   setFilteredData(filtered);
-  // }
-
-  // let filteredCards = filteredData.forEach(person=>{
-  //   return()
-  // })
   return (
     <div style={{ paddingBottom: "4%" }}>
       <Container>
@@ -47,19 +76,42 @@ function Leadership() {
         />
       </Container>
 
-      <div style={{ marginTop: "4%", marginLeft: "14%" }}>
-        <Button variant="outline-danger" style={{ marginLeft: "10%" }}>
+      <div>
+        <Button
+          onClick={() => ourFilter("all")}
+          variant="outline-danger"
+          style={{ marginLeft: "12%" }}
+        >
+          All
+        </Button>
+        <Button
+          onClick={() => ourFilter("Advisor")}
+          variant="outline-danger"
+          style={{ marginLeft: "10%" }}
+        >
           Advisors
         </Button>
-        <Button variant="outline-danger" style={{ marginLeft: "10%" }}>
+        <Button
+          onClick={() => ourFilter("C-level")}
+          variant="outline-danger"
+          style={{ marginLeft: "10%" }}
+        >
           C-level
         </Button>
 
-        <Button variant="outline-danger" style={{ marginLeft: "10%" }}>
+        <Button
+          onClick={() => ourFilter("Management")}
+          variant="outline-danger"
+          style={{ marginLeft: "10%" }}
+        >
           Management
         </Button>
 
-        <Button variant="outline-danger" style={{ marginLeft: "10%" }}>
+        <Button
+          onClick={() => ourFilter("Creativeminds")}
+          variant="outline-danger"
+          style={{ marginLeft: "10%" }}
+        >
           Creative Minds
         </Button>
       </div>
@@ -67,98 +119,15 @@ function Leadership() {
       <Container>
         <div className="portfolio" style={{ margin: "2%" }}>
           <Row>
-            <Card
-              style={{
-                width: "15rem",
-                height: "320px",
-                marginTop: "2%",
-                textAlign: "center",
-              }}
-            >
-              <Card.Img
-                variant="top"
-                src={Dipendra}
-                style={{ height: "220px" }}
-              />
-              <Card.Body>
-                <Card.Title style={{ color: "#347a2a" }}>
-                  Dipendra Bahadur Chand Thakuri
-                </Card.Title>
-                <Card.Text style={{ fontFamily: "Raleway", color: "#777777" }}>
-                  CEO
-                </Card.Text>
-              </Card.Body>
-            </Card>
-
-            <Card
-              style={{
-                width: "15rem",
-                height: "320px",
-                marginTop: "2%",
-                textAlign: "center",
-              }}
-            >
-              <Card.Img
-                variant="top"
-                src={Dipendra}
-                style={{ height: "220px" }}
-              />
-              <Card.Body>
-                <Card.Title style={{ color: "#347a2a" }}>
-                  Dipendra Bahadur Chand Thakuri
-                </Card.Title>
-                <Card.Text style={{ fontFamily: "Raleway", color: "#777777" }}>
-                  CEO
-                </Card.Text>
-              </Card.Body>
-            </Card>
-
-            <Card
-              style={{
-                width: "15rem",
-                height: "320px",
-                marginTop: "2%",
-                textAlign: "center",
-              }}
-            >
-              <Card.Img
-                variant="top"
-                src={Dipendra}
-                style={{ height: "220px" }}
-              />
-              <Card.Body>
-                <Card.Title style={{ color: "#347a2a" }}>
-                  Dipendra Bahadur Chand Thakuri
-                </Card.Title>
-                <Card.Text style={{ fontFamily: "Raleway", color: "#777777" }}>
-                  CEO
-                </Card.Text>
-              </Card.Body>
-            </Card>
-
-            <Card
-              style={{
-                width: "15rem",
-                height: "320px",
-                marginTop: "2%",
-                textAlign: "center",
-              }}
-              data-position=""
-            >
-              <Card.Img
-                variant="top"
-                src={Dipendra}
-                style={{ height: "220px" }}
-              />
-              <Card.Body>
-                <Card.Title style={{ color: "#347a2a" }}>
-                  Dipendra Bahadur Chand Thakuri
-                </Card.Title>
-                <Card.Text style={{ fontFamily: "Raleway", color: "#777777" }}>
-                  CEO
-                </Card.Text>
-              </Card.Body>
-            </Card>
+            {filteredData.map((data) => {
+              return (
+                <LeadershipCard
+                  teamImage={data.image}
+                  teamName={data.name}
+                  teamPosition={data.position}
+                />
+              );
+            })}
           </Row>
         </div>
       </Container>

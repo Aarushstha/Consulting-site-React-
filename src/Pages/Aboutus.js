@@ -65,6 +65,7 @@ function Aboutus() {
                 Company Overview
               </Button>
               <Button
+                href="/career"
                 variant="success"
                 style={{ width: "250px", marginTop: "1%" }}
               >
@@ -85,6 +86,7 @@ function Aboutus() {
                 Partners
               </Button>
               <Button
+                href="/portfolio"
                 variant="success"
                 style={{ width: "250px", marginTop: "1%" }}
               >
@@ -92,6 +94,7 @@ function Aboutus() {
                 Portfolio
               </Button>
               <Button
+                href="/leadership"
                 variant="success"
                 style={{ width: "250px", marginTop: "1%" }}
               >

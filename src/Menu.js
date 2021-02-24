@@ -3,8 +3,8 @@ import "./Menu.css";
 import AccessTimeIcon from "@material-ui/icons/AccessTime";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
-import YouTubeIcon from "@material-ui/icons/YouTube";
 import SearchIcon from "@material-ui/icons/Search";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import PhoneInTalkIcon from "@material-ui/icons/PhoneInTalk";
 import DraftsIcon from "@material-ui/icons/Drafts";
 import RoomTwoToneIcon from "@material-ui/icons/RoomTwoTone";
@@ -22,7 +22,7 @@ function Menu() {
         <a
           href="https://vsic.com.np/webmail"
           target="_blank"
-          rel="noopener norefer"
+          rel="noreferrer"
           style={{ paddingtop: "2%" }}
         >
           WebMail Access
@@ -31,10 +31,28 @@ function Menu() {
           <AccessTimeIcon />
           Sun - Sat 8.00 - 18.00, Saturday CLOSED
         </h4>
-        <span>
-          <FacebookIcon />
-          <InstagramIcon />
-          <YouTubeIcon />
+        <span className="social">
+          <a
+            href="https://www.facebook.com/vinesic"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FacebookIcon />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/vsic/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <LinkedInIcon />
+          </a>
+          <a
+            href="https://www.instagram.com/vinesoftware/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <InstagramIcon />
+          </a>
         </span>
         <h5>
           <input type="text" placeholder="Search" />

@@ -21,10 +21,10 @@ function Platforms() {
           Apart from the services and software, the VSIC also technically
           supports the various platforms which are part of the mission to the
           network with the people to create an impact in the people's pfe with
-          the technpogy.To understand the platform better: they are the
+          the technology. To understand the platform better: they are the
           individual trademarks (later as a separate company) of the founder
           Dipendra which are technically supported by th VSIC. It means even
-          after the company is separately estabpshed,all the IT related works
+          after the company is separately established,all the IT related works
           and other technical parts are handled by VSIC on a regular basis and
           revenue is generated in the company.
         </p>
@@ -33,7 +33,7 @@ function Platforms() {
         <hr
           style={{
             border: " 1px solid #600629",
-            width: "1100px",
+            width: "1110px",
             borderRadius: "5px",
             marginLeft: "0",
           }}
@@ -52,7 +52,7 @@ function Platforms() {
           <p>3. Rooms Finder Nepal(Real Estate Platform)</p>
           <p>4. Incredible Nepal(Tourism Platform</p>
           <p>5. Khaja Khau(Food Ordering Platform</p>
-          <p>6. Naya kantipur(Onpne News Portal)</p>
+          <p>6. Naya kantipur(Online News Portal)</p>
           <p>7. Saral Media(Media Platform)</p>
           <p>8. Ticket Sewa(Ticket Platform) *Proposed</p>
         </div>

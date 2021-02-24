@@ -4,7 +4,7 @@ import Carousel from "react-bootstrap/Carousel";
 import Network from "../Images/networking.jpg";
 import Program from "../Images/program.jpg";
 import Marketing from "../Images/marketing.jpg";
-import { Row, Col, Form, Container, Button, Card } from "react-bootstrap";
+import { Row, Col, Form, Container, Button } from "react-bootstrap";
 import PhoneInTalkIcon from "@material-ui/icons/PhoneInTalk";
 import DraftsIcon from "@material-ui/icons/Drafts";
 import Head from "../Images/head.svg";
