@@ -109,12 +109,18 @@ function Menu() {
               id="collasible-nav-dropdown"
               style={{ marginLeft: "35%" }}
             >
-              <NavDropdown.Item href="/aboutus">Aboutus</NavDropdown.Item>
-              <NavDropdown.Item href="/leadership">Leadership</NavDropdown.Item>
-              <NavDropdown.Item href="/contactus">Contact Us</NavDropdown.Item>
-              <NavDropdown.Item href="/whychooseus">
-                Why Choose Us
-              </NavDropdown.Item>
+              <Col className="company">
+                <NavDropdown.Item href="/aboutus">Aboutus</NavDropdown.Item>
+                <NavDropdown.Item href="/leadership">
+                  Leadership
+                </NavDropdown.Item>
+                <NavDropdown.Item href="/contactus">
+                  Contact Us
+                </NavDropdown.Item>
+                <NavDropdown.Item href="/whychooseus">
+                  Why Choose Us
+                </NavDropdown.Item>
+              </Col>
             </NavDropdown>
 
             <NavDropdown
@@ -123,8 +129,8 @@ function Menu() {
               style={{ marginLeft: "20%" }}
             >
               <Row style={{ width: "900px" }}>
-                <Col>
-                  <p style={{ marginLeft: "5%", fontWeight: "bold" }}>
+                <Col className="first">
+                  <p style={{ marginLeft: "25px", fontWeight: "bold" }}>
                     Development
                   </p>
                   <NavDropdown.Item href="/mobileapp">
@@ -150,8 +156,8 @@ function Menu() {
                   </NavDropdown.Item>
                 </Col>
 
-                <Col>
-                  <p style={{ marginLeft: "5%", fontWeight: "bold" }}>
+                <Col className="second">
+                  <p style={{ marginLeft: "25px", fontWeight: "bold" }}>
                     Services & Support
                   </p>
                   <NavDropdown.Item href="/network&technical">

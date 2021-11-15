@@ -146,12 +146,12 @@ function Aboutus() {
                       fontSize: "large",
                     }}
                   />
-                  <Link
-                    to="/contactus"
+                  <a
+                    href="/contactus"
                     style={{ textDecoration: "none", color: "black" }}
                   >
                     CONTACTS
-                  </Link>
+                  </a>
                 </Button>
               </div>
             </Col>

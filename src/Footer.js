@@ -11,7 +11,7 @@ function Footer() {
   return (
     <div className="footer">
       <Row>
-        <Col>
+        <Col style={{ marginLeft: "5%" }}>
           <img
             src={Foot}
             alt="footer"
@@ -29,9 +29,9 @@ function Footer() {
           <Link to="/home">www.vsic.com.np</Link>
         </Col>
 
-        <Col style={{ marginTop: "2%", textAlign: "center" }}>
+        {/* <Col style={{ marginTop: "2%", textAlign: "center" }}>
           <h5> Recent News</h5>
-        </Col>
+        </Col> */}
 
         <Col
           className="foot"
@@ -90,8 +90,6 @@ function Footer() {
           <a href="http://nayakantipur.com" target="_blank" rel="noreferrer">
             Naya kantipur
           </a>
-          <br />
-          <p>Ticket Sewa(proposed)</p>
         </Col>
 
         <Col style={{ marginTop: "2%", textAlign: "center", lineHeight: "2" }}>
@@ -106,8 +104,7 @@ function Footer() {
       <hr
         style={{
           border: " 1px solid white",
-          marginTop: "4%",
-          marginRight: "4%",
+          marginRight: "15px",
         }}
       />
       <div className="icons">

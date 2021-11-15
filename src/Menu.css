@@ -137,3 +137,15 @@
   .social>a:visited{
     color: white;
   }
+  .second>a:visited{
+    color:indianred;
+  }
+  .first>a:visited{
+    color: indianred;
+  }
+  .company>a:visited{
+    color: indianred;
+  }
+  .first>a:active {
+    color:white;
+  }

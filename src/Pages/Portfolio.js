@@ -1,8 +1,196 @@
-import React from "react";
-import { Container, Row, Card, Button } from "react-bootstrap";
+import { React, useState } from "react";
+import { Container, Row, Button } from "react-bootstrap";
 import Image from "../Images/foot.jpg";
+import PortfolioCard from "./components/leadership/Portfoliocard";
 
 function Portfolio() {
+  let originalData = [
+    {
+      image: Image,
+      name: "NSTRC",
+      about: "Science Blog",
+      category: "Web",
+    },
+    {
+      image: Image,
+      name: "Recent Nepal",
+      about: "Web Portal",
+      category: "Web",
+      link: "/home",
+    },
+    {
+      image: Image,
+      name: " Troopers Tours and Travel",
+      about: "News Portal",
+      category: "Web",
+    },
+    {
+      image: Image,
+      name: "Aryama Consultancy ",
+      about: "Educational Consultancy",
+      category: "Web",
+    },
+    {
+      image: Image,
+      name: "Skill Best ",
+      about: "Consultancy Website",
+      category: "Web",
+    },
+    {
+      image: Image,
+      name: "Naya Kantipur ",
+      about: "News Portal",
+      category: "Web",
+    },
+    {
+      image: Image,
+      name: "Rooms Finder Nepal  ",
+      about: "Real Estate ",
+      category: "Web",
+    },
+    {
+      image: Image,
+      name: "Saral Notes ",
+      about: "Education",
+      category: "Web",
+    },
+
+    {
+      image: Image,
+      name: "Divya Mobile Shop  ",
+      about: "Mobile Shop",
+      category: "Web",
+    },
+    {
+      image: Image,
+      name: "Mount Treks Nepal ",
+      about: "Travel and Tour ",
+      category: "Web",
+    },
+    {
+      image: Image,
+      name: "Western Crystal Academy",
+      about: "School",
+      category: "Web",
+    },
+    {
+      image: Image,
+      name: "GR Design ",
+      about: "Construction Company ",
+      category: "Web",
+    },
+
+    {
+      image: Image,
+      name: "Shree Janata Academy",
+      about: "School",
+      category: "Web",
+    },
+    {
+      image: Image,
+      name: "New Modern School ",
+      about: "School",
+      category: "Web",
+    },
+    {
+      image: Image,
+      name: "Holyland Academy ",
+      about: "School",
+      category: "Web",
+    },
+    {
+      image: Image,
+      name: "Khaja Khau",
+      about: "Food Website",
+      category: "Web",
+    },
+    {
+      image: Image,
+      name: "School Management App ",
+      about: "School Management",
+      category: "mobile",
+    },
+    {
+      image: Image,
+      name: " Invoicing Software",
+      about: "Invoice Software",
+      category: "Web",
+    },
+    {
+      image: Image,
+      name: "Incredible Nepal",
+      about: "Travel and Tours",
+      category: "Web",
+    },
+    {
+      image: Image,
+      name: "Hamropustak",
+      about: "eCommerce Book",
+      category: "Web",
+    },
+    {
+      image: Image,
+      name: "Sajilo Byapar",
+      about: "eCommerce Busniess",
+      category: "Web",
+    },
+    {
+      image: Image,
+      name: "NCM Clean Nepal",
+      about: "",
+      category: "Marketing",
+    },
+    {
+      image: Image,
+      name: "Golden Cleaning Nepal",
+      about: "",
+      category: "Marketing",
+    },
+    {
+      image: Image,
+      name: "Smart Cleaning House",
+      about: "",
+      category: "Marketing",
+    },
+    {
+      image: Image,
+      name: "Coin Market",
+      about: "",
+      category: "Mobile",
+    },
+    {
+      image: Image,
+      name: "Rohi International ",
+      about: "Furniture",
+      category: "Mobile",
+    },
+    {
+      image: Image,
+      name: "Educateme-AI",
+      about: "AI based News Portal ",
+      category: "Web",
+    },
+    {
+      image: Image,
+      name: "Covid-19 Tracker",
+      about: "Covid Data",
+      category: "Web",
+    },
+  ];
+
+  const [filteredData, setFilteredData] = useState(originalData);
+
+  function ourFilter(category) {
+    if (category === "all") {
+      setFilteredData(originalData);
+    } else {
+      let filtered = originalData.filter((project) => {
+        return project.category === category;
+      });
+      setFilteredData(filtered);
+    }
+  }
+
   return (
     <div style={{ paddingBottom: "4%" }}>
       <Container>
@@ -17,227 +205,63 @@ function Portfolio() {
         />
       </Container>
 
-      <div>
-        <Button variant="outline-danger" style={{ marginLeft: "10%" }}>
+      <div
+        style={{
+          paddingLeft: "13%",
+          paddingRight: "13%",
+        }}
+      >
+        <Button
+          onClick={() => ourFilter("all")}
+          variant="outline-danger"
+          style={{ marginRight: "10%" }}
+        >
           All
         </Button>
-        <Button variant="outline-danger" style={{ marginLeft: "10%" }}>
-          Web Design
+        <Button
+          onClick={() => ourFilter("Web")}
+          variant="outline-danger"
+          style={{ marginRight: "10%" }}
+        >
+          Web
+        </Button>
+        <Button
+          onClick={() => ourFilter("Mobile")}
+          variant="outline-danger"
+          style={{ marginRight: "10%" }}
+        >
+          Mobile Applications
         </Button>
 
-        <Button variant="outline-danger" style={{ marginLeft: "10%" }}>
-          Mobile App
-        </Button>
-
-        <Button variant="outline-danger" style={{ marginLeft: "10%" }}>
+        <Button
+          onClick={() => ourFilter("Graphics")}
+          variant="outline-danger"
+          style={{ marginRight: "10%" }}
+        >
           Graphics Design
         </Button>
 
-        <Button variant="outline-danger" style={{ marginLeft: "10%" }}>
+        <Button onClick={() => ourFilter("Marketing")} variant="outline-danger">
           Digital Marketing
         </Button>
       </div>
 
-      <div className="portfolio" style={{ margin: "2%" }}>
-        <Row>
-          <Card style={{ width: "24rem", marginTop: "2%" }}>
-            <Card.Img variant="top" src={Image} />
-            <Card.Body>
-              <Card.Title style={{ color: "#347a2a" }}>
-                Saral Entrance Applications
-              </Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: "24rem", marginTop: "2%" }}>
-            <Card.Img variant="top" src={Image} />
-            <Card.Body>
-              <Card.Title style={{ color: "#347a2a" }}>
-                Saral Entrance Applications
-              </Card.Title>
-              <Card.Text>North Sky Society</Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: "24rem", marginTop: "2%" }}>
-            <Card.Img variant="top" src={Image} />
-            <Card.Body>
-              <Card.Title style={{ color: "#347a2a" }}>
-                Saral Entrance Applications
-              </Card.Title>
-              <Card.Text>
-                Nepal Science & Technology Research Center(NSTRC)
-              </Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: "24rem", marginTop: "2%" }}>
-            <Card.Img variant="top" src={Image} />
-            <Card.Body>
-              <Card.Title style={{ color: "#347a2a" }}>
-                Saral Entrance Applications
-              </Card.Title>
-              <Card.Text>Troopers Tours And Travel pvt.ltd</Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: "24rem", marginTop: "2%" }}>
-            <Card.Img variant="top" src={Image} />
-            <Card.Body>
-              <Card.Title style={{ color: "#347a2a" }}>
-                Saral Entrance Applications
-              </Card.Title>
-              <Card.Text>
-                Department of Water Induces & Disaster Management
-              </Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: "24rem", marginTop: "2%" }}>
-            <Card.Img variant="top" src={Image} />
-            <Card.Body>
-              <Card.Title style={{ color: "#347a2a" }}>
-                Saral Entrance Applications
-              </Card.Title>
-              <Card.Text>Recent Nepal</Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: "24rem", marginTop: "2%" }}>
-            <Card.Img variant="top" src={Image} />
-            <Card.Body>
-              <Card.Title style={{ color: "#347a2a" }}>
-                Saral Entrance Applications
-              </Card.Title>
-              <Card.Text>Nepali Public</Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: "24rem", marginTop: "2%" }}>
-            <Card.Img variant="top" src={Image} />
-            <Card.Body>
-              <Card.Title style={{ color: "#347a2a" }}>
-                Saral Entrance Applications
-              </Card.Title>
-              <Card.Text>Aryama Consultancy</Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: "24rem", marginTop: "2%" }}>
-            <Card.Img variant="top" src={Image} />
-            <Card.Body>
-              <Card.Title style={{ color: "#347a2a" }}>
-                Saral Entrance Applications
-              </Card.Title>
-              <Card.Text>Skill Best Training & Consultancy</Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: "24rem", marginTop: "2%" }}>
-            <Card.Img variant="top" src={Image} />
-            <Card.Body>
-              <Card.Title style={{ color: "#347a2a" }}>
-                Saral Entrance Applications
-              </Card.Title>
-              <Card.Text>Mount Trek & Tours</Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: "24rem", marginTop: "2%" }}>
-            <Card.Img variant="top" src={Image} />
-            <Card.Body>
-              <Card.Title style={{ color: "#347a2a" }}>
-                Saral Entrance Applications
-              </Card.Title>
-              <Card.Text>Holyland Academy</Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: "24rem", marginTop: "2%" }}>
-            <Card.Img variant="top" src={Image} />
-            <Card.Body>
-              <Card.Title style={{ color: "#347a2a" }}>
-                Saral Entrance Applications
-              </Card.Title>
-              <Card.Text>Western Crystal Academy</Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: "24rem", marginTop: "2%" }}>
-            <Card.Img variant="top" src={Image} />
-            <Card.Body>
-              <Card.Title style={{ color: "#347a2a" }}>
-                Saral Entrance Applications
-              </Card.Title>
-              <Card.Text>Gopal Jewellery</Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: "24rem", marginTop: "2%" }}>
-            <Card.Img variant="top" src={Image} />
-            <Card.Body>
-              <Card.Title style={{ color: "#347a2a" }}>
-                Saral Entrance Applications
-              </Card.Title>
-              <Card.Text>Dibya Mobile Shop</Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: "24rem", marginTop: "2%" }}>
-            <Card.Img variant="top" src={Image} />
-            <Card.Body>
-              <Card.Title style={{ color: "#347a2a" }}>
-                Saral Entrance Applications
-              </Card.Title>
-              <Card.Text>New Modern School</Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: "24rem", marginTop: "2%" }}>
-            <Card.Img variant="top" src={Image} />
-            <Card.Body>
-              <Card.Title style={{ color: "#347a2a" }}>
-                Saral Entrance Applications
-              </Card.Title>
-              <Card.Text>GR Design & Builders</Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: "24rem", marginTop: "2%" }}>
-            <Card.Img variant="top" src={Image} />
-            <Card.Body>
-              <Card.Title style={{ color: "#347a2a" }}>
-                Saral Entrance Applications
-              </Card.Title>
-              <Card.Text>Mahakaleshowr</Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: "24rem", marginTop: "2%" }}>
-            <Card.Img variant="top" src={Image} />
-            <Card.Body>
-              <Card.Title style={{ color: "#347a2a" }}>
-                Saral Entrance Applications
-              </Card.Title>
-              <Card.Text>Recent Nepal</Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: "24rem", marginTop: "2%" }}>
-            <Card.Img variant="top" src={Image} />
-            <Card.Body>
-              <Card.Title style={{ color: "#347a2a" }}>
-                Saral Entrance Applications
-              </Card.Title>
-              <Card.Text>Recent Nepal</Card.Text>
-            </Card.Body>
-          </Card>
-        </Row>
-      </div>
+      <Container>
+        <div className="portfolio" style={{ margin: "2%" }}>
+          <Row>
+            {filteredData.map((data) => {
+              return (
+                <PortfolioCard
+                  portImage={data.image}
+                  portName={data.name}
+                  portAbout={data.about}
+                  portLink={data.link}
+                />
+              );
+            })}
+          </Row>
+        </div>
+      </Container>
     </div>
   );
 }

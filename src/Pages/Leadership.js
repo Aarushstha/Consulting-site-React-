@@ -117,7 +117,7 @@ function Leadership() {
       </div>
 
       <Container>
-        <div className="portfolio" style={{ margin: "2%" }}>
+        <div className="leadership" style={{ margin: "2%" }}>
           <Row>
             {filteredData.map((data) => {
               return (
